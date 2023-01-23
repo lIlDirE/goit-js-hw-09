@@ -1,0 +1,1 @@
+{"mappings":"AAGG","sources":["src/js/01-color-switcher.js"],"sourcesContent":["\nfunction getRandomHexColor() {\n\treturn `#${Math.floor(Math.random() * 16777215).toString(16)}`;\n  }ç"],"names":[],"version":3,"file":"01-color-switcher.5462a86d.js.map"}
