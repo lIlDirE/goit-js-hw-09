@@ -7,7 +7,7 @@ let timeLeft = 0;
 let timerId = null;
 startBtn.disabled = true;
 
-refDate = {
+let refDate = {
 	days: document.querySelector('.value[data-days]'),
 	hours: document.querySelector('.value[data-hours]'),
 	minutes: document.querySelector('.value[data-minutes]'),
