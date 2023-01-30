@@ -3,6 +3,7 @@ const button = form.elements[3];
 const amount = form.elements.amount;
 const delay = form.elements.delay;
 const step = form.elements.step;
+let countTmp;
 
 button.addEventListener('click', onBtn);
 
@@ -21,7 +22,8 @@ function createPromise(position, delay) {
   
 function onBtn(evt) {
 	evt.preventDefault();
-   	for (let position = 1; position <= (+amount.value); position += 1) {
+	countTmp = (+amount.value);
+   	for (let position = 1; position <= amount.value; position += 1) {
 	 createPromise(position, delay.value)
 	   .then(({ position, delay }) => {
 			console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
@@ -29,7 +31,7 @@ function onBtn(evt) {
 	   .catch(({ position, delay }) => {
 			console.log(`❌ Rejected promise ${position} in ${delay}ms`);
 	   })
-	 delay.value = (+step.value +(+delay.value));
+	   countTmp = (+step.value +(+delay.value));
    }
  }
 
